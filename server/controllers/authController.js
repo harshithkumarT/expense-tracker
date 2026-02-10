@@ -4,6 +4,7 @@ import pool from "../config/db.js";
 
 export const register = async (req, res) => {
   try {
+    console.log("Register Request Body:", req.body); // DEBUG LOG
     if (!req.body) {
       return res.status(400).json({ message: " request body is missing" });
     }
